@@ -1,0 +1,6 @@
+@tailwindcss;
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+     background-color: #10172a;
+}
