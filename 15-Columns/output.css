@@ -11,7 +11,9 @@
     --color-green-700: oklch(0.527 0.154 150.069);
     --color-blue-700: oklch(0.488 0.243 264.376);
     --color-pink-700: oklch(0.525 0.223 3.958);
+    --spacing: 0.25rem;
     --container-3xs: 16rem;
+    --container-sm: 24rem;
     --default-font-family: var(--font-sans);
     --default-font-feature-settings: var(--font-sans--font-feature-settings);
     --default-font-variation-settings: var(
@@ -197,6 +199,12 @@
   }
   .columns-20 {
     columns: 20;
+  }
+  .columns-sm {
+    columns: var(--container-sm);
+  }
+  .gap-0 {
+    gap: calc(var(--spacing) * 0);
   }
   .border {
     border-style: var(--tw-border-style);
