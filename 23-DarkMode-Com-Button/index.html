@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-br" id="root" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Com Botão</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body>
+    <button 
+        id="select-mode"
+        class="cursor-pointer border border-slate-800 m-2 p-2 rounded dark:bg-slate-900 dark:text-white"
+        onclick="changeMode()"
+    >
+        Apply Dark Mode
+    </button>
+
+    <div class="dark:bg-slate-800">
+        <h1 class="text-7xl dark:text-white">Dark Mode Text with Tailwind css</h1>
+        <p class="text-4xl dark:text-white">Code Step By Step</p>
+    </div>
+
+    <div class="flex m-20 border border-slate-700 p-3 dark:bg-slate-600 dark:border-red-600">
+        <div class="bg-blue-300 size-12 dark:bg-black">
+
+        </div>
+        <p class="text-2xl ml-10 p-2 text-white">Box with Dark Mode</p>
+    </div>
+
+    <script>
+        function changeMode() {
+            let el = document.getElementById('root')
+
+            if (el.className == "dark") {
+                document.getElementById('root').classList.remove("dark")
+                document.getElementById('select-mode').innerText="Apply Dark Mode"
+            } else {
+                document.getElementById('root').classList.add("dark")
+                document.getElementById('select-mode').innerText="Apply Light Mode"
+            }
+        }
+    </script>
+</body>
+
+</html>
